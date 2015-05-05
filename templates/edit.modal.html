@@ -1,0 +1,37 @@
+<!-- Edit Note Modal -->
+        <div id="editModal" class="modal">
+            <div class="modal-content">                
+                <!--<div class="container">-->
+                <div class="row">
+                    <form ng-submit="updateNote()">
+                        <div class="row">
+                            <h5>Edit Note</h5>
+                            <div class="input-field col s6">
+                                <input ng-model="selectedNote.title" placeholder="Title" id="title" type="text" class="validate">
+                            </div>
+                            <div class="input-field col s6">
+                                <select ng-model="selectedNote.category">
+                                    <option value="" disabled>Choose category</option>
+                                    <option value="work">work</option>
+                                    <option value="life">life</option>
+                                    <option value="todolist">todolist</option>
+                                </select>
+                                <label>{{selectedNote.category}}</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea ng-model="selectedNote.content" placeholder="Note Content" id="content" class="materialize-textarea"></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button ng-click='closeModal()' class="left btn waves-effect" type="submit">Cancel</button>
+                            <button class="btn waves-effect waves-light modal-action modal-close" type="submit" name="addButton">Update</button>
+                            <!--<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Submit</a>-->
+                        </div>
+                    </form>
+                </div>
+                <!--</div>-->
+
+            </div>
+        </div>

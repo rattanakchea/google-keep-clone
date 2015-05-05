@@ -1,0 +1,36 @@
+<!-- Add Note Modal -->
+        <div id="addModal" class="modal">
+            
+            <div class="modal-content">                
+                <!--<div class="container">-->
+                <div class="row">
+                    <h5>Add Note</h5>
+                    <form ng-submit="addNote()">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input ng-model="note.title" placeholder="Title" id="title" type="text" class="validate">
+                            </div>
+                            <div class="input-field col s6">
+                                <select ng-model="note.category">
+                                    <option value="" disabled selected>Choose category</option>
+                                    <option value="work">work</option>
+                                    <option value="life">life</option>
+                                    <option value="todolist">todolist</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea ng-model="note.content" placeholder="Note Content" id="content" class="materialize-textarea"></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn waves-effect waves-light modal-action modal-close" type="submit" name="addButton">Add</button>
+                            <!--<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Submit</a>-->
+                        </div>
+                    </form>
+                </div>
+                <!--</div>-->
+
+            </div>
+        </div>
